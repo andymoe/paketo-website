@@ -2,28 +2,172 @@
 <html>
 
 <head>
-    {{ partial "head.html" . }}
+<style>
+    @charset "utf-8";
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+    pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small,
+    strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label,
+    legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+    canvas, details, figcaption, figure, footer, header, hgroup, menu, nav,
+    section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
+
+    h1 {
+        font-size: 28px;
+        font-weight: 100;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+
+        font-family: Avenir Next;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .cf {
+        padding: 20px;
+        height: 247px;
+
+        background: #4B5259;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    }
+
+    .cf h1, h2 {
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .tagline {
+        text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .supported-languages {
+       padding: 20px;
+       height: 247px;
+    }
+
+    .what-are-buildpacks {
+        padding: 20px;
+        height: 474px;
+
+        background: #4B5259;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    }
+
+    .what-are-buildpacks h3 {
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .what-are-buildpacks li {
+        margin-bottom: 8px;
+        color: white;
+    }
+
+    .how-it-works {
+        padding: 20px;
+        height: 712px;
+    }
+
+    .features {
+        height: 946px;
+        padding: 20px;
+
+        background: #4B5259;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    }
+
+    .ready-to-contribute {
+        padding: 20px;
+        height: 712px;
+    }
+
+    .ready-to-contribute h2 {
+        color: #000;
+    }
+
+    .footer {
+        height: 360px;
+        padding: 20px;
+
+        background: #4B5259;
+        box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    }
+
+</style>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN39N8V"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    {{ partial "header.html" . }}
-
     <div class="content">
+        <header class="cf">
+            <div class="logo">
+                <h1>Paketo</h1>
+            </div>
+            <div>
+                <h2 class="tagline">Your app, in your favorite language, ready to run in the cloud</h2>
+            </div>
+        </header>
 
-        {{ partial "hero.html" . }}
-        {{ partial "what-are.html" . }}
-        {{ partial "why-paketo.html" . }}
-        {{ partial "get-started.html" . }}
+        <div class="supported-languages">
+            <h3>All the langutes we support...</h3>
+            <button>Get Started</button>
+        </div>
 
+        <div class="what-are-buildpacks">
+            <h3>What are Paketo Buildpacks</h3>
+           <ul>
+               <li>
+                   Buildpacks transform your application source code into container
+                   images that can run on any cloud
+               </li>
+               <li>
+                   No matter what language your app is in, we can build and update it for you
+               </li>
+               <li>
+                   Easily customize our buildpacks to meet your app's needs
+               </li>
+           </ul>
+        </div>
+        <div class="how-it-works">
+            <h3>Here's how it works</h3>
+
+            ...FANCY ANIMATION HERE...
+        </div>
+        <div class="features">
+            <h2>Features</h2>
+
+        </div>
+        <div class="ready-to-contribute">
+            <h2>Ready to contribute?</h2>
+
+            <h2>About the Paketo project</h2>
+            <p>Our buildpacks are based on applying the learnings from over 10 years
+               of building and maintaining Cloud Foundry buildpacks
+            </p>
+            <p>
+                Community-driven project Staffed for the long term with full-time team members from VMware Neutral governance through the CFF - get involved! (link)
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>Twitter</p>
+            <p>Slack</p>
+            <p>GitHub</p>
+
+        </div>
     </div>
-
-    {{ partial "footer.html" .}}
-
 </body>
-
 </html>
